@@ -47,7 +47,7 @@
 
 The five learning points in Part 2 should correspond to the five learning points recorded by the person I spotted in their own Part 1.
 
-**Spotter's confirmation:** [CONFIRM THAT BOTH FILES MATCH]
+**Spotter's confirmation:** [✅]
 
-**Person I spotted's confirmation:** [CONFIRM THAT BOTH FILES MATCH]
+**Person I spotted's confirmation:** [✅]
 

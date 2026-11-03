@@ -1,95 +1,50 @@
-# AI Review — Lesson 1 EC2 Runbook
+# AI Review of the Lesson 1 Runbook
 
-**Student:** Ronnie Baker  
-**Course:** SEIR Foundations  
-**Module:** 1  
-**Lesson:** 1 — EC2
+**Student:** Your Name  
+**AI used:** (Claude / ChatGPT / Gemini / etc.)  
+**Conversation share link:** https://PASTE-LINK-HERE  
+*(or: transcript uploaded as `ai_review_transcript_YourName.txt`)*
 
-## AI Information
+## Question 1
+**What I asked:**  
 
-- AI tool: [ChatGPT / Claude / Other]
-- Model: [MODEL NAME]
-- Date reviewed: [DATE]
-- Conversation share link: [INSERT SHARE LINK]
+**AI's answer (in my own words):**  
 
-## Question 1: [QUESTION ABOUT THE RUNBOOK]
+**How I checked it:**  
 
-**AI's Answer (In My Own Words):**
+## Question 2
+**What I asked:**  
 
-[Summarize the AI's explanation in your own words.]
+**AI's answer (in my own words):**  
 
-**How I Checked It:**
+**How I checked it:**  
 
-[Explain exactly how you verified the answer. Include commands executed, AWS Console observations, documentation consulted, or actual test results.]
+## Question 3
+**What I asked:**  
 
-**Result:** [Verified / Partially Verified / Incorrect]
+**AI's answer (in my own words):**  
 
-## Question 2: [QUESTION ABOUT THE RUNBOOK]
+**How I checked it:**  
 
-**AI's Answer (In My Own Words):**
+## Question 4
+**What I asked:**  
 
-[INSERT SUMMARY]
+**AI's answer (in my own words):**  
 
-**How I Checked It:**
+**How I checked it:**  
 
-[EXPLAIN YOUR VERIFICATION PROCESS]
+## Question 5
+**What I asked:**  
 
-**Result:** [Verified / Partially Verified / Incorrect]
+**AI's answer (in my own words):**  
 
-## Question 3: [QUESTION ABOUT THE RUNBOOK]
+**How I checked it:**  
 
-**AI's Answer (In My Own Words):**
+## Where the AI was wrong, vague, or out of date
 
-[INSERT SUMMARY]
+**Question number:**  
+**What the AI said:**  
+**What was actually true:**  
+**How I found out:**  
 
-**How I Checked It:**
-
-[EXPLAIN YOUR VERIFICATION PROCESS]
-
-**Result:** [Verified / Partially Verified / Incorrect]
-
-## Question 4: [QUESTION ABOUT THE RUNBOOK]
-
-**AI's Answer (In My Own Words):**
-
-[INSERT SUMMARY]
-
-**How I Checked It:**
-
-[EXPLAIN YOUR VERIFICATION PROCESS]
-
-**Result:** [Verified / Partially Verified / Incorrect]
-
-## Question 5: [QUESTION ABOUT THE RUNBOOK]
-
-**AI's Answer (In My Own Words):**
-
-[INSERT SUMMARY]
-
-**How I Checked It:**
-
-[EXPLAIN YOUR VERIFICATION PROCESS]
-
-**Result:** [Verified / Partially Verified / Incorrect]
-
-## Example of an AI Error, Vague Answer, or Outdated Information
-
-**What the AI Said:**
-
-[INSERT THE ORIGINAL CLAIM]
-
-**Why It Was Wrong, Vague, or Outdated:**
-
-[EXPLAIN THE PROBLEM]
-
-**How I Discovered the Problem:**
-
-[DESCRIBE THE DOCUMENTATION, COMMAND, OR TEST THAT REVEALED THE PROBLEM]
-
-**Correct Understanding:**
-
-[EXPLAIN THE CORRECT INFORMATION]
-
-## Overall Reflection
-
-[Explain what you learned from reviewing the runbook with AI, which explanations were most useful, and why independently verifying AI-generated information matters.]
+*I did not paste any keys, passwords, or tokens into the AI.*

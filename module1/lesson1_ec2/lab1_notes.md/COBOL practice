@@ -1,1 +1,61 @@
+## COBOL Practice
 
+**Lab run used:** Run 7  
+**Instance ID:** [Insert actual instance ID]
+
+### Return Code 0
+Command:
+```bash
+./cobol/bin/account_lookup 100001
+echo $?
+```
+Exact output:
+```text
+[Paste actual output]
+```
+
+### Return Code 4
+Command:
+```bash
+./cobol/bin/account_lookup 999999
+echo $?
+```
+Exact output:
+```text
+[Paste actual output]
+```
+
+### Return Code 8
+Command:
+```bash
+./cobol/bin/payment_post TXN-RB-0001 100001 0.00 USD INV-RB-0001
+echo $?
+```
+Exact output:
+```text
+[Paste actual output]
+```
+
+### Return Code 12
+Command:
+```bash
+cd ~
+/opt/balerica-bank/cobol/bin/account_lookup 100001
+echo $?
+```
+Exact output:
+```text
+[Paste actual output]
+```
+
+### Alice's balance decoded by hand
+
+[Show the original fixed-width balance and its decimal interpretation.]
+
+### My transaction journal entries
+
+[Paste the actual journal lines for your TXN-RB transactions.]
+
+### Did the balance change?
+
+[Explain whether each transaction changed Alice's balance and why.]

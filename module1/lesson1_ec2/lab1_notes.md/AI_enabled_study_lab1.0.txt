@@ -2,23 +2,58 @@
 
 **Student:** Ronnie Baker  
 **Course:** SEIR Foundations  
-**Module:** 1  
 **Lesson:** 1 — EC2
 
-## Topic 1: [TOPIC NAME]
+## Topic 1 — [Topic Name]
 
-[Write a paragraph of at least five sentences explaining the topic, what you learned, and why it matters. Include relevant technical details and numerical claims supported by sources.]
+**Explanation:**
 
-**Sources:**
-1. Reading: [Title, author/organization, publication year, URL]
-2. Video: [Title, creator, publication year, URL]
-3. AI: [AI tool/model, date consulted, conversation link]
-
-## Topic 2: [TOPIC NAME]
-
-[Write at least five sentences explaining the topic, its underlying concepts, and what you learned.]
+[Write at least five sentences explaining the topic in your own words.]
 
 **Sources:**
-1. Reading: [Title, author/organization, publication year, URL]
-2. Video: [Title, creator, publication year, URL]
-3. AI: [AI tool/model, date consulted,
+
+1. **Reading:** [Title and URL]
+2. **Video:** [Title and URL]
+3. **AI:** [AI tool and conversation link]
+
+## Topic 2 — [Topic Name]
+
+**Explanation:**
+
+[Write at least five sentences explaining the topic in your own words.]
+
+**Sources:**
+
+1. **Reading:** [Title and URL]
+2. **Video:** [Title and URL]
+3. **AI:** [AI tool and conversation link]
+
+## Topic 3 — [Topic Name]
+
+**Explanation:**
+
+[Write at least five sentences explaining the topic in your own words.]
+
+**Sources:**
+
+1. **Reading:** [Title and URL]
+2. **Video:** [Title and URL]
+3. **AI:** [AI tool and conversation link]
+
+## Topic 4 — [Topic Name]
+
+**Explanation:**
+
+[Write at least five sentences explaining the topic in your own words.]
+
+**Sources:**
+
+1. **Reading:** [Title and URL]
+2. **Video:** [Title and URL]
+3. **AI:** [AI tool and conversation link]
+
+## Additional Notes
+
+- [Important concept]
+- [Important command]
+- [Something I want to investigate further]</

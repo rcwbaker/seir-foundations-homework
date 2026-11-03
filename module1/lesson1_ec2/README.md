@@ -12,7 +12,7 @@
 | 3 | 11/4/2026 | America/Chicago | `i-073b76f479bd6b380` | `2026-11-04 15:20:00` | `ec2-EXAMPLE-3.compute-1.amazonaws.com` | lab1_run3.jpg | Yes |
 | 4 | 11/4/2026 | America/Chicago | `i-00205a422f3b2d368` | `2026-11-04 16:30:00` | `ec2-EXAMPLE-4.compute-1.amazonaws.com` | lab1_run4.jpg | Yes |
 | 5 | 11/5/2026 | America/Chicago | `i-06a9d25f07d289d7e` | `2026-11-05 14:00:00` | `ec2-EXAMPLE-5.compute-1.amazonaws.com` | lab1_run5.jpg | Yes |
-| 6 | 11/5/2026 | America/Chicago | `i-EXAMPLE00000000006` | `2026-11-05 15:15:00` | `ec2-EXAMPLE-6.compute-1.amazonaws.com` | lab1_run6.jpg | Yes |
+| 6 | 11/5/2026 | America/Chicago | `i-03169f2b54f5fed28` | `2026-11-05 15:15:00` | `ec2-EXAMPLE-6.compute-1.amazonaws.com` | lab1_run6.jpg | Yes |
 | 7 | 11/5/2026 | America/Chicago | `i-EXAMPLE00000000007` | `2026-11-05 16:25:00` | `ec2-EXAMPLE-7.compute-1.amazonaws.com` | lab1_run7.jpg | Yes |
 
 *The instance IDs, DNS names, and boot times above are illustrative examples, not real AWS resources.*

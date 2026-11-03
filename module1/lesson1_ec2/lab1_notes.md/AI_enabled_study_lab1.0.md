@@ -1,59 +1,40 @@
-# AI-Enabled Study Lab — Lesson 1
+# AI-Enabled Study — Lab 1.0
 
-**Student:** Ronnie Baker  
-**Course:** SEIR Foundations  
-**Lesson:** 1 — EC2
+**Student:** Your Name
 
-## Topic 1 — [Topic Name]
+## TOPIC 1: (name it)
 
-**Explanation:**
-
-[Write at least five sentences explaining the topic in your own words.]
+**Paragraph (minimum 5 sentences):**  
+Write here. Any number must be followed by its source and year, for example "(AWS Docs, 2026)".
 
 **Sources:**
 
-1. **Reading:** [Title and URL]
-2. **Video:** [Title and URL]
-3. **AI:** [AI tool and conversation link]
+| Type | Source | Year |
+|---|---|---|
+| Reading | Title and link | |
+| Video | Title and link | |
+| AI | Which AI, plus share link or prompt used | |
 
-## Topic 2 — [Topic Name]
+## TOPIC 2: (name it)
 
-**Explanation:**
-
-[Write at least five sentences explaining the topic in your own words.]
-
-**Sources:**
-
-1. **Reading:** [Title and URL]
-2. **Video:** [Title and URL]
-3. **AI:** [AI tool and conversation link]
-
-## Topic 3 — [Topic Name]
-
-**Explanation:**
-
-[Write at least five sentences explaining the topic in your own words.]
+**Paragraph (minimum 5 sentences):**  
 
 **Sources:**
 
-1. **Reading:** [Title and URL]
-2. **Video:** [Title and URL]
-3. **AI:** [AI tool and conversation link]
+| Type | Source | Year |
+|---|---|---|
+| Reading | | |
+| Video | | |
+| AI | | |
 
-## Topic 4 — [Topic Name]
+## TOPIC 3: (name it)
 
-**Explanation:**
-
-[Write at least five sentences explaining the topic in your own words.]
+**Paragraph (minimum 5 sentences):**  
 
 **Sources:**
 
-1. **Reading:** [Title and URL]
-2. **Video:** [Title and URL]
-3. **AI:** [AI tool and conversation link]
-
-## Additional Notes
-
-- [Important concept]
-- [Important command]
-- [Something I want to investigate further]</
+| Type | Source | Year |
+|---|---|---|
+| Reading | | |
+| Video | | |
+| AI | | |

@@ -7,10 +7,10 @@
 
 | Run | Date | Time zone | Instance ID | Boot time (UTC) | Public IPv4 DNS | Screenshot | Terminated? |
 |---|---|---|---|---|---|---|---|
-| 1 | | America/Chicago | | | | lab1_run1.jpg | |
-| 2 | | America/Chicago | | | | lab1_run2.jpg | |
-| 3 | | America/Chicago | | | | lab1_run3.jpg | |
-| 4 | | America/Chicago | | | | lab1_run4.jpg | |
-| 5 | | America/Chicago | | | | lab1_run5.jpg | |
-| 6 | | America/Chicago | | | | lab1_run6.jpg | |
-| 7 | | America/Chicago | | | | lab1_run7.jpg | |
+| 1 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run1.jpg |XXXXX|
+| 2 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run2.jpg |XXXXX|
+| 3 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run3.jpg |XXXXX|
+| 4 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run4.jpg |XXXXX|
+| 5 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run5.jpg |XXXXX|
+| 6 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run6.jpg |XXXXX|
+| 7 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run7.jpg |XXXXX|

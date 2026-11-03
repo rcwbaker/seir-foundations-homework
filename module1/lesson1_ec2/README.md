@@ -14,3 +14,97 @@
 | 5 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run5.jpg |XXXXX|
 | 6 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run6.jpg |XXXXX|
 | 7 |11/1/2026 | America/Chicago |XXXXX|XXXXX|XXXXX| lab1_run7.jpg |XXXXX|
+
+# Lesson 1 — Personal Lab Notes
+
+## Run 1
+**Instance ID:** 
+
+1. What changed:
+2. Errors encountered and how I fixed them:
+3. What I newly understood:
+
+**Exact output unique to this run:**
+```text
+Paste an actual output line here.
+```
+
+## Run 2
+**Instance ID:**
+
+1. What changed:
+2. Errors encountered and how I fixed them:
+3. What I newly understood:
+
+**Exact output unique to this run:**
+```text
+Paste an actual output line here.
+```
+
+## Run 3
+**Instance ID:**
+
+1. What changed:
+2. Errors encountered and how I fixed them:
+3. What I newly understood:
+
+**Exact output unique to this run:**
+```text
+Paste an actual output line here.
+```
+
+## Run 4
+**Instance ID:**
+
+1. What changed:
+2. Errors encountered and how I fixed them:
+3. What I newly understood:
+
+**Exact output unique to this run:**
+```text
+Paste an actual output line here.
+```
+
+## Run 5
+**Instance ID:**
+
+1. What changed:
+2. Errors encountered and how I fixed them:
+3. What I newly understood:
+
+**Exact output unique to this run:**
+```text
+Paste an actual output line here.
+```
+
+## Run 6
+**Instance ID:**
+
+1. What changed:
+2. Errors encountered and how I fixed them:
+3. What I newly understood:
+
+**Exact output unique to this run:**
+```text
+Paste an actual output line here.
+```
+
+## Run 7
+**Instance ID:**
+
+1. What changed:
+2. Errors encountered and how I fixed them:
+3. What I newly understood:
+
+**Exact output unique to this run:**
+```text
+Paste an actual output line here.
+```
+
+## Mistakes I made
+
+- 
+
+## Commands I now know by heart
+
+- 

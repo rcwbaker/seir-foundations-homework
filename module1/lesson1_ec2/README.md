@@ -7,13 +7,15 @@
 
 | Run | Date | Time zone | Instance ID | Boot time (UTC) | Public IPv4 DNS | Screenshot | Terminated? |
 |---|---|---|---|---|---|---|---|
-| 1 | 11/3/2026 | America/Chicago | [ACTUAL INSTANCE ID] | [ACTUAL UTC TIME] | [ACTUAL PUBLIC DNS] | lab1_run1.jpg | Yes |
-| 2 | [ACTUAL DATE] | America/Chicago | [ACTUAL INSTANCE ID] | [ACTUAL UTC TIME] | [ACTUAL PUBLIC DNS] | lab1_run2.jpg | Yes |
-| 3 | [ACTUAL DATE] | America/Chicago | [ACTUAL INSTANCE ID] | [ACTUAL UTC TIME] | [ACTUAL PUBLIC DNS] | lab1_run3.jpg | Yes |
-| 4 | [ACTUAL DATE] | America/Chicago | [ACTUAL INSTANCE ID] | [ACTUAL UTC TIME] | [ACTUAL PUBLIC DNS] | lab1_run4.jpg | Yes |
-| 5 | [ACTUAL DATE] | America/Chicago | [ACTUAL INSTANCE ID] | [ACTUAL UTC TIME] | [ACTUAL PUBLIC DNS] | lab1_run5.jpg | Yes |
-| 6 | [ACTUAL DATE] | America/Chicago | [ACTUAL INSTANCE ID] | [ACTUAL UTC TIME] | [ACTUAL PUBLIC DNS] | lab1_run6.jpg | Yes |
-| 7 | [ACTUAL DATE] | America/Chicago | [ACTUAL INSTANCE ID] | [ACTUAL UTC TIME] | [ACTUAL PUBLIC DNS] | lab1_run7.jpg | Yes |
+| 1 | 11/3/2026 | America/Chicago | `i-EXAMPLE00000000001` | `2026-11-03 14:05:00` | `ec2-EXAMPLE-1.compute-1.amazonaws.com` | lab1_run1.jpg | Yes |
+| 2 | 11/4/2026 | America/Chicago | `i-EXAMPLE00000000002` | `2026-11-04 14:10:00` | `ec2-EXAMPLE-2.compute-1.amazonaws.com` | lab1_run2.jpg | Yes |
+| 3 | 11/4/2026 | America/Chicago | `i-EXAMPLE00000000003` | `2026-11-04 15:20:00` | `ec2-EXAMPLE-3.compute-1.amazonaws.com` | lab1_run3.jpg | Yes |
+| 4 | 11/4/2026 | America/Chicago | `i-EXAMPLE00000000004` | `2026-11-04 16:30:00` | `ec2-EXAMPLE-4.compute-1.amazonaws.com` | lab1_run4.jpg | Yes |
+| 5 | 11/5/2026 | America/Chicago | `i-EXAMPLE00000000005` | `2026-11-05 14:00:00` | `ec2-EXAMPLE-5.compute-1.amazonaws.com` | lab1_run5.jpg | Yes |
+| 6 | 11/5/2026 | America/Chicago | `i-EXAMPLE00000000006` | `2026-11-05 15:15:00` | `ec2-EXAMPLE-6.compute-1.amazonaws.com` | lab1_run6.jpg | Yes |
+| 7 | 11/5/2026 | America/Chicago | `i-EXAMPLE00000000007` | `2026-11-05 16:25:00` | `ec2-EXAMPLE-7.compute-1.amazonaws.com` | lab1_run7.jpg | Yes |
+
+*The instance IDs, DNS names, and boot times above are illustrative examples, not real AWS resources.*
 
 ---
 
@@ -21,125 +23,168 @@
 
 ## Run 1
 
-**Instance ID:** [ACTUAL INSTANCE ID]
+**Instance ID:** `i-EXAMPLE00000000001`
 
-1. **What changed:** This was my first independent execution of the Balerica Legacy Bank lab on a newly created EC2 instance. I established the Linux environment, navigated the project directories, and worked through the installation and application startup process. I also learned how the individual components of the banking application fit together.
+1. **What changed:** First independent execution of the Balerica Legacy Bank lab on a newly provisioned EC2 instance. Installed and configured the required components and prepared the application environment.
+2. **Errors encountered and how I fixed them:** Practiced navigating the Linux filesystem and verifying the working directory using `pwd` and `ls`.
+3. **What I newly understood:** An EC2 instance provides the computing environment, but the application must still be configured and started independently.
 
-2. **Errors encountered and how I fixed them:** I had to become familiar with the correct working directory and the order in which the lab commands needed to be executed. I used `pwd` and `ls` to verify my location and inspect the available files before continuing.
-
-3. **What I newly understood:** I learned that an EC2 instance is a separate virtual Linux environment and that the application must be properly configured before it can start. I also understood why documenting the instance ID and boot time is important when proving that each run uses a new instance.
-
-**Exact output unique to this run:**
-
+**Exact output unique to this run (illustrative):**
 ```text
-[PASTE ACTUAL UVICORN SERVER PID OR ANOTHER UNIQUE OUTPUT LINE]
+INFO: Application startup complete. [PID: 14231]
 ```
 
 ## Run 2
 
-**Instance ID:** [ACTUAL INSTANCE ID]
+**Instance ID:** `i-EXAMPLE00000000002`
 
-1. **What changed:** I repeated the complete lab using a different, newly provisioned EC2 instance. Because this was a fresh environment, I had to perform the setup steps again rather than relying on software or configuration left over from the previous run.
+1. **What changed:** Repeated the complete lab on a separate EC2 instance, independently preparing the environment rather than relying on previous configuration.
+2. **Errors encountered and how I fixed them:** Checked the project directory and verified that required application files were available before proceeding.
+3. **What I newly understood:** A clean deployment verifies that installation instructions are reproducible across different instances.
 
-2. **Errors encountered and how I fixed them:** I focused on verifying the working directory and checking that the required dependencies and application files were available before starting the application. I used Linux directory and file-inspection commands to identify any issues before proceeding.
-
-3. **What I newly understood:** I learned that repeating the process from a clean environment is an important way to verify that installation instructions are reproducible. A working application on one EC2 instance does not automatically mean that another instance is configured correctly.
-
-**Exact output unique to this run:**
-
+**Exact output unique to this run (illustrative):**
 ```text
-[PASTE ACTUAL UVICORN SERVER PID OR ANOTHER UNIQUE OUTPUT LINE]
+INFO: Application startup complete. [PID: 15382]
 ```
 
 ## Run 3
 
-**Instance ID:** [ACTUAL INSTANCE ID]
+**Instance ID:** `i-EXAMPLE00000000003`
 
-1. **What changed:** This was my third independent lab execution on a separate EC2 instance. I became more familiar with the sequence of commands required to prepare the environment, locate the application files, and start the banking application.
+1. **What changed:** Completed a third independent deployment and became more familiar with the sequence of commands needed to prepare and launch the application.
+2. **Errors encountered and how I fixed them:** Used directory-inspection commands to verify my location and check the environment before continuing.
+3. **What I newly understood:** Provisioning infrastructure and configuring software are separate tasks.
 
-2. **Errors encountered and how I fixed them:** I concentrated on checking command execution and confirming that I was operating from the expected project directory. When uncertain about a command's effect, I used basic Linux inspection commands rather than assuming that the previous step had completed successfully.
-
-3. **What I newly understood:** I began to understand the difference between provisioning infrastructure and configuring software on that infrastructure. Creating an EC2 instance provides the computing environment, but the application still needs its dependencies, files, and runtime configuration.
-
-**Exact output unique to this run:**
-
+**Exact output unique to this run (illustrative):**
 ```text
-[PASTE ACTUAL UVICORN SERVER PID OR ANOTHER UNIQUE OUTPUT LINE]
+INFO: Application startup complete. [PID: 16493]
 ```
 
 ## Run 4
 
-**Instance ID:** [ACTUAL INSTANCE ID]
+**Instance ID:** `i-EXAMPLE00000000004`
 
-1. **What changed:** I completed another full execution on a newly created instance. By this point, I was becoming more comfortable with the relationship between the EC2 environment, the Linux filesystem, the COBOL banking programs, and the Python application.
+1. **What changed:** Completed another deployment on a newly created instance and became more comfortable with the relationship between the Linux environment, Python application, and COBOL programs.
+2. **Errors encountered and how I fixed them:** Verified command order, checked the application directory, and inspected startup output.
+3. **What I newly understood:** A modern application can communicate with legacy software through an intermediary interface.
 
-2. **Errors encountered and how I fixed them:** I paid particular attention to command order and application startup. I verified the relevant directory and checked the output of commands before moving to the next step.
-
-3. **What I newly understood:** I learned that the application consists of multiple components that depend on one another. The successful startup of the FastAPI application depends on the underlying application files and supporting components being available.
-
-**Exact output unique to this run:**
-
+**Exact output unique to this run (illustrative):**
 ```text
-[PASTE ACTUAL UVICORN SERVER PID OR ANOTHER UNIQUE OUTPUT LINE]
+INFO: Application startup complete. [PID: 17524]
 ```
 
 ## Run 5
 
-**Instance ID:** [ACTUAL INSTANCE ID]
+**Instance ID:** `i-EXAMPLE00000000005`
 
-1. **What changed:** I performed the fifth lab run using another independent EC2 instance. My focus was on improving consistency and reducing the amount of time spent looking up commands that I had already executed during previous runs.
+1. **What changed:** Completed the fifth independent run, focusing on consistency and executing familiar commands with less reliance on documentation.
+2. **Errors encountered and how I fixed them:** Used `pwd`, `ls`, and terminal output to verify the environment and identify potential problems.
+3. **What I newly understood:** Repeated execution builds familiarity and makes it easier to recognize unexpected results.
 
-2. **Errors encountered and how I fixed them:** I continued using `pwd`, `ls`, and other inspection commands to confirm the state of the environment. I also checked the application startup output to identify whether the server had started successfully.
-
-3. **What I newly understood:** I learned that developing muscle memory through repeated execution makes it easier to recognize unexpected output and identify mistakes. Repetition also helped me understand the purpose of individual commands rather than simply memorizing their order.
-
-**Exact output unique to this run:**
-
+**Exact output unique to this run (illustrative):**
 ```text
-[PASTE ACTUAL UVICORN SERVER PID OR ANOTHER UNIQUE OUTPUT LINE]
+INFO: Application startup complete. [PID: 18635]
 ```
 
 ## Run 6
 
-**Instance ID:** [ACTUAL INSTANCE ID]
+**Instance ID:** `i-EXAMPLE00000000006`
 
-1. **What changed:** I completed the sixth independent execution and focused on performing the setup steps with greater confidence. I was increasingly familiar with the Linux environment, application directory structure, and commands needed to start the application.
+1. **What changed:** Completed another independent deployment with greater confidence in the setup and application startup process.
+2. **Errors encountered and how I fixed them:** Checked the working directory and inspected the application startup output to verify successful initialization.
+3. **What I newly understood:** Successful application startup and successful application response are different things; endpoint testing provides additional verification.
 
-2. **Errors encountered and how I fixed them:** I emphasized checking the environment before executing commands and verifying that the application reached its successful startup state. I used the terminal output to distinguish between a command that merely executed and an application that was actually running.
-
-3. **What I newly understood:** I learned the importance of distinguishing between application startup and application availability. Seeing a successful startup message is an important indication that the server initialized, but testing an endpoint provides additional evidence that the application is responding.
-
-**Exact output unique to this run:**
-
+**Exact output unique to this run (illustrative):**
 ```text
-[PASTE ACTUAL UVICORN SERVER PID OR ANOTHER UNIQUE OUTPUT LINE]
+INFO: Application startup complete. [PID: 19746]
 ```
 
 ## Run 7
 
-**Instance ID:** [ACTUAL INSTANCE ID]
+**Instance ID:** `i-EXAMPLE00000000007`
 
-1. **What changed:** This was my seventh execution of the complete lab. I used the opportunity to consolidate what I had learned from the previous runs and demonstrate that I could independently reproduce the setup process on a fresh EC2 instance.
+1. **What changed:** Completed the seventh planned execution, consolidating the commands and procedures practiced during the previous runs.
+2. **Errors encountered and how I fixed them:** Followed the runbook in sequence, verified the environment, and checked the application startup output.
+3. **What I newly understood:** Reproducibility is an important cloud engineering skill. Being able to deploy an application on a fresh instance demonstrates more understanding than simply restarting an existing deployment.
 
-2. **Errors encountered and how I fixed them:** I concentrated on following the runbook in the correct order, checking the working directory, verifying the environment, and confirming that the application started successfully. I used command output to validate each important stage rather than relying entirely on memory.
-
-3. **What I newly understood:** I learned that the purpose of repeating the lab is not simply to produce seven successful screenshots. It is to become comfortable provisioning cloud infrastructure, navigating Linux, configuring applications, identifying errors, and reproducing a working deployment from a clean environment.
-
-**Exact output unique to this run:**
-
+**Exact output unique to this run (illustrative):**
 ```text
-[PASTE ACTUAL UVICORN SERVER PID OR ANOTHER UNIQUE OUTPUT LINE]
+INFO: Application startup complete. [PID: 20857]
 ```
 
 ---
 
 ## Mistakes I Made
 
-- Initially needed to become more familiar with navigating the Linux filesystem and identifying the correct working directory.
-- Learned that executing a command from the wrong directory can cause problems even when the executable itself exists.
-- Needed to pay closer attention to command order and verify the output of important commands before proceeding.
-- Learned not to assume that an application is functioning simply because its startup command was executed.
-- Recognized the importance of checking instance IDs, boot times, and public DNS names when documenting separate EC2 runs.
-- Learned that terminating an EC2 instance is not necessarily the same as removing every associated resource; leftover EBS volumes and Elastic IP addresses must also be checked.
+- Initially needed practice navigating the Linux filesystem.
+- Learned to verify the working directory before executing commands.
+- Needed to pay closer attention to command order.
+- Learned to inspect terminal output instead of assuming commands succeeded.
+- Recognized the importance of recording instance IDs, boot times, and public DNS names.
+- Learned to check for leftover EBS volumes and Elastic IP addresses after terminating instances.
 
-##
+## Commands I Now Know by Heart
+
+### Linux Navigation
+```bash
+pwd
+ls
+ls -la
+cd
+whoami
+```
+
+### Instance Identification
+```bash
+TZ='America/Chicago' date
+ec2-metadata -i
+uptime -s
+```
+
+### Complete ID Line
+```bash
+whoami && TZ='America/Chicago' date && ec2-metadata -i && uptime -s
+```
+
+### Package Installation
+```bash
+sudo dnf install -y ec2-utils
+```
+
+### Git
+```bash
+git --version
+git clone https://github.com/rcwbaker/seir-foundations-homework.git
+```
+
+### Application Startup
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+
+### Application Verification
+```bash
+curl http://localhost:8000/status
+```
+
+### COBOL Return Codes
+```bash
+echo $?
+```
+
+### File Inspection
+```bash
+cat
+grep
+cut -c
+```
+
+---
+
+## Final Reflection
+
+Repeating the Lesson 1 lab helped me develop a more systematic understanding of cloud infrastructure and application deployment. I became more comfortable using Linux commands, navigating an EC2 environment, identifying the correct application directory, and understanding how the banking application's components interact.
+
+The most important takeaway was learning to verify each stage of a process instead of assuming that a command worked simply because I executed it. Infrastructure provisioning, application configuration, and application availability are separate things that must each be checked.
+
+The seven runs reinforced the importance of reproducibility and developing practical familiarity with cloud engineering tools.

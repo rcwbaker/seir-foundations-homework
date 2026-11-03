@@ -1,40 +1,32 @@
-# AI-Enabled Study — Lab 1.0
+AI_enabled_study_lab1.0.txt
+Name: [Your Name]
 
-**Student:** Your Name
+=== DATABASES ===
+Sources: Read - AWS, "Relational vs Non-relational Databases" (accessed 2026). Watch - IBM Technology, "SQL vs. NoSQL" (YouTube). AI - [Claude / your AI], conversation on [date] 2026.
 
-## TOPIC 1: (name it)
+Databases fall into two broad families: relational (SQL) databases, which store data in tables with a fixed schema and enforce relationships with keys, and non-relational (NoSQL) databases, which store data as documents, key-value pairs, wide columns, or graphs. The AWS article explains that relational databases suit structured data where consistency matters, while non-relational databases trade strict structure for flexibility and horizontal scale. The IBM video adds that SQL systems give strong ACID guarantees, which is why banks and ledgers depend on them, whereas NoSQL systems often favor availability and speed for huge, changing datasets. To choose one, you ask what the data looks like, how it will be queried, how much consistency you need, and how much it must scale. In the cloud, SQL is typically run as managed services such as Amazon RDS or Aurora, and NoSQL as services such as DynamoDB, so the choice is as much about workload as about hosting. The de facto standards are PostgreSQL, MySQL, Oracle, and SQL Server on the relational side, and PostgreSQL ranked as the most-used database in the Stack Overflow Developer Survey (about 49% in 2024) [verify]. PostgreSQL's strengths are standards compliance, extensibility, JSON support, and being free and open source; its weaknesses are more tuning effort for very high write loads and horizontal scaling that is harder than in native NoSQL systems. I checked the AI's claims against the AWS article and the survey's published results rather than trusting its numbers.
 
-**Paragraph (minimum 5 sentences):**  
-Write here. Any number must be followed by its source and year, for example "(AWS Docs, 2026)".
+=== COBOL ===
+Sources: Read - Wikipedia, "COBOL" (accessed 2026). Watch - Fireship, "COBOL in 100 Seconds" (YouTube). AI - [your AI], conversation on [date] 2026.
 
-**Sources:**
+COBOL (COmmon Business-Oriented Language) was designed in 1959 by the CODASYL committee and first specified in 1960, heavily influenced by Grace Hopper's earlier FLOW-MATIC language. The Wikipedia article describes it as a verbose, English-like language built for business data processing, and the Fireship video highlights that it is still running critical systems despite its age. A widely cited Reuters report (2017) said about 220 billion lines of COBOL were in use, that 43% of banking systems were built on it, and that it handled about 95% of ATM swipes and 80% of in-person card transactions [verify]. The same Reuters piece cited roughly $3 trillion in daily commerce flowing through COBOL systems (2017) [verify]. Engineer age is often reported as a retiring workforce, with commonly cited averages in the mid-50s, but I could not find a rigorous source for that, so I treat it as anecdotal [verify]. Replacing COBOL is expensive and risky: the Commonwealth Bank of Australia's core-banking replacement reportedly cost on the order of A$1 billion or more and took about five years (reported 2012-2017) [verify]. The AI was useful for summarizing, but I confirmed the statistics against Reuters and Wikipedia because AI tools tend to repeat these figures without citing them.
 
-| Type | Source | Year |
-|---|---|---|
-| Reading | Title and link | |
-| Video | Title and link | |
-| AI | Which AI, plus share link or prompt used | |
+=== SWIFT (financial messaging network, not the Apple language) ===
+Sources: Read - Wikipedia, "SWIFT". Watch - a16z, "Foreign Exchange 101" (YouTube). AI - [your AI], conversation on [date] 2026.
 
-## TOPIC 2: (name it)
+SWIFT (Society for Worldwide Interbank Financial Telecommunication) was founded in 1973 in Brussels by a group of banks and began live operation in 1977 to replace slow, error-prone telex. Importantly, SWIFT does not move money itself; it carries standardized payment instructions between banks, which then settle through correspondent accounts or central-bank systems. The a16z video explains how foreign exchange and cross-border payments depend on that chain of correspondent banks, which is why transfers can be slow and costly. SWIFT says it connects more than 11,000 institutions in over 200 countries and handles roughly 50 million messages on a typical day (SWIFT, 2024) [verify]. Competitors and alternatives include China's CIPS (launched 2015), Russia's SPFS, domestic real-time systems, and blockchain-based or stablecoin-based payment networks, but none has matched SWIFT's reach. Replacing SWIFT would require thousands of banks to agree on a new standard and rebuild their payment systems, so the effort is enormous and mostly political and coordination-driven.
 
-**Paragraph (minimum 5 sentences):**  
+=== ISO 20022 deep dive ===
+Sources: Read - Swift, "ISO 20022 FAQs" (swift.com). Watch - [pick any ISO 20022 video, e.g., Swift or a bank explainer]. AI - [your AI], conversation on [date] 2026.
 
-**Sources:**
+ISO 20022 is a global XML-based financial messaging standard that replaces the older fixed-format SWIFT MT messages with richer, structured data. MT103 (single customer credit transfer) maps to pacs.008, and MT202 (bank-to-bank transfer) maps to pacs.009, with MT202 COV mapping to the pacs.009 COV variant. The key advantage is richer data: MX messages carry structured names, addresses, purpose codes, and remittance information that MT fields could only hold in cramped free text, which improves sanctions screening and straight-through processing. During the coexistence period, banks could send either MT or MX for cross-border payments, with Swift translating between them, which sometimes truncated data. Per Swift's FAQ, coexistence for cross-border payments and reporting ended in November 2025 (22 November 2025) [verify this date on the FAQ page], after which banks must send ISO 20022 for those message types. The practical consequence is that legacy fixed-width and MT-based systems, including COBOL cores, need translation layers or rewrites to produce and consume MX messages. I confirmed the date directly on the Swift FAQ page instead of relying on the AI's answer.
 
-| Type | Source | Year |
-|---|---|---|
-| Reading | | |
-| Video | | |
-| AI | | |
+=== APIs ===
+Sources: Read - MDN, "An overview of HTTP". Watch - IBM Technology, "What is a REST API?" (YouTube). AI - [your AI], conversation on [date] 2026.
 
-## TOPIC 3: (name it)
+An API (Application Programming Interface) is a contract that lets one piece of software request services from another; the idea dates to the 1960s-70s, while web APIs grew from HTTP (Tim Berners-Lee, early 1990s) and REST was defined by Roy Fielding in his 2000 doctoral dissertation. The MDN overview explains HTTP as a client-server, request-response protocol with methods, headers, and status codes, and the IBM video shows how REST APIs use those methods on resources, usually returning JSON. Adoption is massive: Postman's State of the API report found roughly 74% of respondents were "API-first" (Postman, 2024) [verify]. APIs are used to connect services, mobile apps, payment systems, and increasingly AI models and agents, which call tools through APIs; that makes APIs central to AI adoption. Competitors and alternatives include GraphQL, gRPC, SOAP, and message queues, each with different trade-offs. Securing APIs is difficult because they expose business logic directly, and the OWASP API Security Top 10 (2023) lists broken object-level authorization as the number one risk. Next-lab prep: GET reads data and should not change anything, POST sends data to create or act, JSON is the text format both sides exchange, and APIs must validate incoming data because the client can never be trusted, which FastAPI helps with through typed request models.
 
-**Paragraph (minimum 5 sentences):**  
+=== INTERSECTION: COBOL, SWIFT, APIs & DATABASES ===
+Sources: Read - US GAO (2025), "Modernizing Critical Decades-Old Legacy Systems". Watch - "Modernizing COBOL: From Mainframe to API". AI - [your AI], conversation on [date] 2026.
 
-**Sources:**
-
-| Type | Source | Year |
-|---|---|---|
-| Reading | | |
-| Video | | |
-| AI | | |
+These four technologies form one stack in finance: COBOL cores run the ledger, databases store the system of record, SWIFT carries instructions between institutions, and APIs expose the old core to new channels, exactly as the Balerica lab does with FastAPI in front of COBOL. The GAO (2025) report argues that agencies still depend on decades-old systems that are costly to maintain and risky to leave unmodernized, and it reports [insert specific number from the report, with year] [fill in]. In finance, the payoff is reliability and regulatory compliance, which is why banks wrap rather than rewrite their cores. In medicine, legacy systems run claims processing and records, and failures affect patient care and payments. In academia, student information and financial-aid systems often run on aging platforms, and in government, systems such as tax and unemployment processing run on COBOL; in 2020 several US states publicly sought COBOL programmers when unemployment claims surged. The Modernizing COBOL video shows the common pattern of exposing mainframe logic as APIs, which lets organizations modernize incrementally. I used the AI for the industry comparison but verified specifics against the GAO report because AI summaries of government reports are often vague on numbers.

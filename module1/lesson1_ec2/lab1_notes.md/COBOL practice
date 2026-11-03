@@ -1,89 +1,14 @@
 ## COBOL Practice
 
-**Lab Run Used:** Run 7  
-**Instance ID:** [INSERT ACTUAL INSTANCE ID]
+**Lab Run Used:** Run 7
 
-### Return Code 0 — Success
+**Instance ID:** INSERT_INSTANCE_ID
 
-**Command:**
+### Return Code 0 - Success
 
-    cd /opt/balerica-bank
-    ./cobol/bin/account_lookup 100001
-    echo $?
+Command:
 
-**Exact Output:**
-
-    [PASTE ACTUAL TERMINAL OUTPUT HERE]
-
-### Return Code 4 — Account Not Found
-
-**Command:**
-
-    cd /opt/balerica-bank
-    ./cobol/bin/account_lookup 999999
-    echo $?
-
-**Exact Output:**
-
-    [PASTE ACTUAL TERMINAL OUTPUT HERE]
-
-### Return Code 8 — Business Rejection
-
-**Command:**
-
-    cd /opt/balerica-bank
-    ./cobol/bin/payment_post TXN-RB-0001 100001 0.00 USD INV-RB-0001
-    echo $?
-
-**Exact Output:**
-
-    [PASTE ACTUAL TERMINAL OUTPUT HERE]
-
-### Return Code 12 — Environment Failure
-
-**Command:**
-
-    cd ~
-    /opt/balerica-bank/cobol/bin/account_lookup 100001
-    echo $?
-
-**Exact Output:**
-
-    [PASTE ACTUAL TERMINAL OUTPUT HERE]
-
-### Alice's Balance — Manual Ledger Decoding
-
-**Original Fixed-Width Balance:**
-
-    [PASTE ORIGINAL BALANCE FIELD HERE]
-
-**Decoded Balance:**
-
-    [INSERT DECODED BALANCE HERE]
-
-**Commands Used:**
-
-    cd /opt/balerica-bank
-    cut -c1-6 data/accounts.dat
-    cut -c7-36 data/accounts.dat
-    cut -c37-44 data/accounts.dat
-    cut -c45-56 data/accounts.dat
-    cut -c57-59 data/accounts.dat
-
-### Transaction Journal Entries
-
-**My Transaction IDs:**
-
-- TXN-RB-0001
-
-**Exact Journal Output:**
-
-    [PASTE ACTUAL JOURNAL ENTRIES HERE]
-
-### Did the Balance Change?
-
-[Explain whether Alice's balance changed after your transactions and why.]
-
-### What I Learned
-
-[Describe what you learned about COBOL return codes, fixed-width records, transaction processing, and ledger decoding.]
+```bash
+cd /opt/balerica-bank
+./cobol/bin/account_lookup 100001
+echo $?

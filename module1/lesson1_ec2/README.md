@@ -34,9 +34,9 @@ Per-run notes, mistakes, commands and the COBOL practice section are in
 |---|---|---|
 | 7 lab-run screenshots | `Lab Runs/lab1_run1.jpg` – `lab1_run7.jpg` | ⚠️ All 7 on one day (limit is 3 per day). Runs 1, 4, 5, 6 lack instance ID + boot time in the ID line. |
 | Lab notes | [lab1_notes.md](lab1_notes.md) | ✅ Real per-run notes, mistakes, and commands |
-| COBOL rc 0 / rc 4 | shown in every lab-run screenshot | ⚠️ Separate `cobol_rc0.jpg` / `cobol_rc4.jpg` not yet taken |
-| COBOL rc 8 / rc 12 / ledger decode | `cobol_rc8.jpg`, `cobol_rc12.jpg`, `cobol_ledger_decode.jpg` | ❌ Not done |
-| Git clone screenshot | `git_clone.jpg` | ❌ Not done |
+| COBOL return codes 0 / 4 / 8 / 12 | [cobol_rc0.jpg](COBOL/cobol_rc0.jpg), [cobol_rc4.jpg](COBOL/cobol_rc4.jpg), [cobol_rc8.jpg](COBOL/cobol_rc8.jpg), [cobol_rc12.jpg](COBOL/cobol_rc12.jpg) | ✅ Done 11/10 with `TXN-RB-` IDs, on practice instance `i-0d9215c7ed93430d6` (not a lab run in the table above) |
+| Ledger decoded with `cut -c` | [cobol_ledger_decode.jpg](COBOL/cobol_ledger_decode.jpg) | ✅ Alice = 5000.00; balance unchanged after a POSTED payment |
+| Git clone screenshot | [git_clone.jpg](git_clone.jpg) | ✅ Clone + `ls module1` only, no token, nothing pushed |
 | AI review | [ai_review_RonnieBaker.txt](ai_review_RonnieBaker.txt) | ⚠️ Needs the real conversation share link or transcript |
 | Spotter | [spotter_RonnieBaker.txt](spotter_RonnieBaker.txt) | ⚠️ Needs the name of the person I spotted and a cross-check with both people |
 | AI-enabled study | [AI_enabled_study_lab1.0.txt](AI_enabled_study_lab1.0.txt) | ✅ |

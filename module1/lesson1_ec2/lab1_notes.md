@@ -204,57 +204,117 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 ## COBOL practice
 
-**Run and instance used:** the return codes below show up in every lab-run
-screenshot. Run 2 (`i-02990f8ea4604f0c2`) and Run 7 (`i-09129f1856aff12f6`)
-are the cleanest because their ID lines are complete.
+**Instance used:** `i-0d9215c7ed93430d6` (Name tag `balerica-cobol-practice`),
+launched 11/10/2026, boot time `2026-11-10 12:41:23` UTC, in
+`/opt/balerica-bank`. This was a separate practice instance, not one of the
+seven lab runs in the README table. Claude Code ran the terminal for this
+session at my request. It was terminated afterwards.
 
-### Return code 0 — success (in every run screenshot)
+Screenshots are in [`COBOL/`](COBOL/). Each one starts with the ID line.
+
+### Return code 0 — success ([cobol_rc0.jpg](COBOL/cobol_rc0.jpg))
 ```text
-$ ./cobol/bin/account_lookup 100001
+$ ./cobol/bin/account_lookup 100001; echo $?
 ACCOUNT=100001
 NAME=Alice Johnson
 STATUS=ACTIVE
 BALANCE=5000.00
 CURRENCY=USD
-$ echo $?
 0
-```
-
-### Return code 4 — account not found (in every run screenshot)
-```text
-$ ./cobol/bin/account_lookup 999999
-ERROR=ACCOUNT NOT FOUND
-ACCOUNT=999999
-4
-```
-
-### Return code 8 — business rejection
-**Not done yet.** No screenshot or output was captured for a zero-amount payment.
-
-### Return code 12 — environment failure
-**Not done yet.** No screenshot or output was captured for running from the wrong folder.
-
-### Payment journal (actual output)
-```text
-$ ./cobol/bin/payment_post TXN0001 100001 125.50 USD INV-1001
-TXN=TXN0001
+$ ./cobol/bin/payment_post TXN-RB-0001 100001 125.50 USD INV-RB-0001; echo $?
+TXN=TXN-RB-0001
 ACCOUNT=100001
 AMOUNT=125.50
 CURRENCY=USD
 STATUS=POSTED
 REASON=APPROVED
-$ cat data/payments.dat
-TXN0001              100001000000012550USDPOSTED  INV-1001
+0
 ```
 
-Reading that journal line by position: `TXN0001` (transaction ID) ·
-`100001` (account) · `000000012550` (amount with an implied decimal = 125.50) ·
-`USD` · `POSTED` · `INV-1001` (reference).
+### Return code 4 — account not found ([cobol_rc4.jpg](COBOL/cobol_rc4.jpg))
+```text
+$ ./cobol/bin/account_lookup 999999; echo $?
+ERROR=ACCOUNT NOT FOUND
+ACCOUNT=999999
+4
+```
 
-**Still to do:** post payments with my own IDs (`TXN-RB-0001` and up), decode
-Alice's record in `data/accounts.dat` with `cut -c`, and check whether her
-balance changed after posting. The `5000.00` above was read *before* the
-payment, so I haven't recorded whether it changed.
+### Return code 8 — business rejection ([cobol_rc8.jpg](COBOL/cobol_rc8.jpg))
+```text
+$ ./cobol/bin/payment_post TXN-RB-0002 100001 0.00 USD INV-RB-0002; echo $?
+TXN=TXN-RB-0002
+ACCOUNT=100001
+AMOUNT=0.00
+CURRENCY=USD
+STATUS=REJECTED
+REASON=AMOUNT MUST BE GREATER THAN ZERO
+8
+```
+The program ran fine and said no: the account exists and is active, but a
+$0.00 payment breaks a business rule. That's a different failure from a missing
+account (4) or a broken environment (12).
+
+### Return code 12 — environment failure ([cobol_rc12.jpg](COBOL/cobol_rc12.jpg))
+```text
+$ cd ~ && pwd
+/home/ec2-user
+$ /opt/balerica-bank/cobol/bin/account_lookup 100001; echo $?
+ERROR=CANNOT OPEN data/accounts.dat
+FILE-STATUS=35
+12
+```
+The program looks for `data/accounts.dat` relative to the **current folder**,
+so running the same binary from `/home/ec2-user` can't find the file.
+COBOL file status `35` means "file not found". The account is fine. The
+environment is what's wrong.
+
+### Ledger decoded by hand ([cobol_ledger_decode.jpg](COBOL/cobol_ledger_decode.jpg))
+```text
+$ grep '^100001' data/accounts.dat | cat -A
+100001Alice Johnson                 ACTIVE  000000500000USD$
+ID=[100001] NAME=[Alice Johnson                 ] STATUS=[ACTIVE  ] BALANCE=[000000500000] CCY=[USD]
+```
+
+| Columns (`cut -c`) | Field | Raw value | Meaning |
+|---|---|---|---|
+| 1–6 | Account ID | `100001` | 100001 |
+| 7–36 | Name | `Alice Johnson` + 17 spaces | Alice Johnson |
+| 37–44 | Status | `ACTIVE` + 2 spaces | ACTIVE |
+| 45–56 | Balance `PIC 9(10)V99` | `000000500000` | **5000.00** (last 2 digits are cents, so there's no decimal point in the file) |
+| 57–59 | Currency | `USD` | USD |
+
+`cat -A` puts a `$` at the end of each line, which shows the record is exactly
+59 characters with no tabs or commas. The padding spaces are part of the data.
+
+### My journal lines
+```text
+$ grep TXN-RB data/payments.dat
+TXN-RB-0001         100001000000012550USDPOSTED  INV-RB-0001
+TXN-RB-0002         100001000000000000USDREJECTEDINV-RB-0002
+$ ./cobol/bin/account_lookup 100001 | grep BALANCE
+BALANCE=5000.00
+```
+
+**Did the balance change?** No. Alice's balance was still `5000.00` after
+`TXN-RB-0001` (125.50) was POSTED. `payment_post` opens `accounts.dat` for
+INPUT only and only appends a verdict to `payments.dat`. The COBOL core
+approves or rejects payments but never updates the stored balance. The
+rejected `TXN-RB-0002` was also written to the journal (as `REJECTED`, amount
+`000000000000`), so the journal keeps rejections too, not just successes.
+
+---
+
+## Git clone ([git_clone.jpg](git_clone.jpg))
+
+Same instance (`i-0d9215c7ed93430d6`), 11/10/2026 06:46:49 CST. Clone only:
+no token on the server, nothing pushed.
+```text
+$ git clone https://github.com/rcwbaker/seir-foundations-homework.git
+Cloning into 'seir-foundations-homework'...
+Receiving objects: 100% (698/698), 13.18 MiB | 50.00 MiB/s, done.
+$ ls seir-foundations-homework/module1
+lab0.5_basics_contd  lab0_basics  lesson1_ec2  lesson2_slack
+```
 
 ---
 
